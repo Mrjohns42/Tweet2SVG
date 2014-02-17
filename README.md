@@ -39,3 +39,4 @@
 		SVG images are stored in the tweet2svg/image folder
 		Images will accumulate there as long as the script is running
 		Re-running the script will delete the old images and start fresh
+
