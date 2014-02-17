@@ -20,15 +20,17 @@ def main():
 			hashtags.append("#" + hashtag)
 
 	users=[]
+		
+	for directory in ["images", "data"]:
+		if os.path.exists(directory):
+			rmtree(directory)
+		os.makedirs(directory)
 		 
 	listen = SListener(api, 'test')
 	stream = tweepy.Stream(auth, listen)
 
 	print "Streaming started on %s keywords and %s users...\n" % (len(hashtags), len(users))
-	
-	if os.path.exists("images"):
-		rmtree("images")
-	os.makedirs("images")
+
 
 	try: 
 		if not hashtags and not users:
@@ -48,8 +50,3 @@ if __name__ == '__main__':
 
 
 	
-
-
-
-
-
