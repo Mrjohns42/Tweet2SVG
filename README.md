@@ -8,7 +8,7 @@
 
 - Get pip
 
-		sudo apt-get install pip
+		sudo apt-get install python-pip
 
 - Get tweepy
 
